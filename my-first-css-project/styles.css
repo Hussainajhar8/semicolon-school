@@ -1,0 +1,45 @@
+* {
+
+}
+h1 {
+  color: green;
+  font-family: "Calibri", "sans-serif";
+}
+
+p {
+  color: aqua;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.p-green {
+  color: green;
+}
+
+.p-blue {
+  color: blue;
+}
+
+#about-me {
+  color: purple;
+}
+
+#my-ig-link {
+  font-size: 50px;
+  color: red;
+  background-color: darkgoldenrod;
+  padding: 10px;
+  border-width: 2px;
+  border-color: green;
+  border-style: solid;
+  margin: 50px;
+  border-radius: 20px;
+}
+
+.button-text {
+  text-align: center;
+}
+
+#ig-logo {
+  width: 100px;
+  height: 100px;
+}

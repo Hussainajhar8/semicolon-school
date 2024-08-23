@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Reference</title>
+  <!-- External CSS With Style Sheets - Lowest Priority -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Internal CSS - Middle Priority -->
+  <style>
+    h1 {
+      color: pink;
+    }
+  </style>
+</head>
+<body>
+  <!-- Inline CSS - Highest Priority -->
+  <h1 style="color: blue;">Section 1</h1>
+  <p>This should be a styled paragraph</p>
+  <p class="p-green">This should be green</p>
+  <p class="p-blue">This should be blue</p>
+  <p class="p-blue">This should be blue</p>
+
+  <h1>Section 2</h1>
+  <p id="about-me">This is a long paragraph about me</p>
+
+  <div id="my-ig-link">
+    <p class="button-text"><a href="https://instagram.com/apple" target="_blank"><img src="ig-logo.webp" id="ig-logo"></a></p>
+  </div>
+  
+</body>
+</html>
