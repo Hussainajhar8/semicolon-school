@@ -4,7 +4,7 @@ Welcome to my repository for the coursework and assignments I'll be completing a
 
 ## About Semicolon School
 
-Semicolon School is a learning program focused on helping students like me start a successful SaaS business and develop full stack development skills. Here’s a bit more about what the school offers:
+Semicolon School is a learning program focused on helping students like me develop full stack development skills. Here’s a bit more about what the school offers:
 
 ### What We Learn:
 
