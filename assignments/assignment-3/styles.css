@@ -47,6 +47,12 @@ header {
   border-radius: 5px;
 }
 
+.content-nav {
+  display: flex;
+  justify-content: space-between; /* Space out the two lists */
+  align-items: center; /* Align items in the center vertically */
+}
+
 .facts {
   display: flex;
   flex-direction: row;
