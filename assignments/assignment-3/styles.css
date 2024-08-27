@@ -13,25 +13,27 @@ body {
 header {
   background-color: white;
   padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /* Use Flexbox to arrange child elements in a row */
+  justify-content: space-between; /* Space out elements within the header */
+  align-items: center; /* Vertically align items in the center */
   border-bottom: 1px solid lightgray;
 }
 
 .search {
   display: flex;
+  height: 40px;
+  padding-right: 500px;
 }
 
 .top-nav ul {
-  list-style-type: none;
-  display: flex;
+  list-style-type: none; /* Remove bullet points from the list */
+  display: flex; 
   gap: 15px;
 }
 
 
 .container {
-  display: flex;
+  display: flex; 
   align-items: center;
   padding: 30px;
   padding-left: 100px;
@@ -42,31 +44,31 @@ header {
 }
 
 .content {
-  flex: auto;
+  flex: auto; /* Allow content to grow and take up available space */
   padding-left: 100px;
   border-radius: 5px;
 }
 
-.content-nav {
-  display: flex;
+.content-nav { 
+  display: flex; /* Use Flexbox to arrange child elements in a row */
   justify-content: space-between; /* Space out the two lists */
   align-items: center; /* Align items in the center vertically */
 }
 
 .facts {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  flex-direction: row; /* Ensure that facts are aligned in a horizontal row */
+  flex-wrap: wrap; /* Allow wrapping to a new line if content overflows */
+  align-items: flex-start; /* Align items at the start of the container's cross-axis (top) */
 }
 
 .facts .facts-content {
-  flex: 1;
+  flex: 1; /* Allow each fact to grow and fill available space */
 }
 
 .facts .facts-title-box {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Arrange content in a vertical column */
   align-items: center;
   margin-left: 30px;
 }
@@ -105,7 +107,7 @@ header {
   border: 1px solid gold;
   border-radius: 5px;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center the content horizontally within the notice box */
 }
 
 .appearance-options {
