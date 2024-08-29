@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #a67ccb;
+}
+
+h1 , p , a, label, input {
+  font-family: "Crete Round", sans-serif;
+}
+
+header {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header ul li {
+  padding-right: 15px;
+  font-size: x-large;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  text-align: left;
+  padding: 10px 20px ;
+}
+
+.why-chocolates img {
+  width: 100%
+}
+
+main .why-chocolates h2 {
+  position: absolute;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 2em;
+  text-decoration: none;
+  background-color: rgba(161, 69, 7, 0.701);
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+
+main .why-chocolates p {
+  position: absolute;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1em;
+  text-decoration: none;
+  background-color: rgba(161, 69, 7, 0.701);
+  padding: 10px 10px;
+  border-radius: 20px;
+}
+
+.tiers {
+  padding: 20px;
+  text-align: center;
+}
+
+.tiers ul {
+  list-style: none;
+  font-size: 2em;
+}
+
+.s-tier {
+  color: aqua;
+}
+
+.a-tier {
+  color: green;
+}
+
+.b-tier {
+  color: lightgreen;
+}
+
+.c-tier {
+  color: yellow;
+}
+
+.d-tier {
+  color: orange;
+}
+
+.f-tier {
+  color: darkred;
+}
+
+.brand-overviews {
+  padding: 20px 0px;
+}
+
+.brand-overviews h2 {
+  padding-top: 20px;
+}
+
+footer {
+  text-align: right;
+}
