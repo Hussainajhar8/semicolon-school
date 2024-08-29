@@ -116,14 +116,17 @@ main .why-chocolates p {
   padding-top: 20px;
 }
 
-.Cadbury {
+.Cadbury, .Mars, .Nestle, .Lindt, .FerreroRocher, .Kinder {
   display: flex;
   align-items: center;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.Cadbury .Cadbury-description {
+.Cadbury-description, .Mars-description, .Nestle-description, 
+.Lindt-description, .FerreroRocher-description, .Kinder-description {
   flex-direction: column;
+  padding-left: 20px;
 }
 
 
@@ -139,6 +142,15 @@ main .why-chocolates p {
   padding: 10px 30px;
   border-radius: 20px;
 } */
+
+.Avoid {
+  display: flex;
+  flex-direction: column;
+}
+
+.Avoid h2, p {
+  text-align: center;
+}
 
 .honorable-mentions {
   padding: 20px 0px;
