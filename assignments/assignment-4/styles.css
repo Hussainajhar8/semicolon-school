@@ -148,7 +148,13 @@ main .why-chocolates p {
   flex-direction: column;
 }
 
-.Avoid h2, p {
+.Dark-chocolate {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.Chomp {
+  padding-top: 20px;
   text-align: center;
 }
 
