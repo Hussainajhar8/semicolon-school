@@ -110,6 +110,14 @@ main .why-chocolates p {
   padding-top: 20px;
 }
 
+.honorable-mentions {
+  padding: 20px 0px;
+}
+
+.honorable-mentions h1, h2 {
+  padding-top: 20px;
+}
+
 footer {
   text-align: right;
 }
