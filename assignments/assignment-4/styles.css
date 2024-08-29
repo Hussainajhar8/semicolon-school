@@ -47,12 +47,11 @@ main .why-chocolates h2 {
   z-index: 1;
   top: 20%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%);
   font-size: 2em;
   text-decoration: none;
-  background-color: rgba(161, 69, 7, 0.701);
   padding: 10px 30px;
-  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 main .why-chocolates p {
@@ -62,12 +61,11 @@ main .why-chocolates p {
   z-index: 1;
   top: 28%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%,-20%);
   font-size: 1em;
   text-decoration: none;
-  background-color: rgba(161, 69, 7, 0.701);
   padding: 10px 10px;
-  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .tiers {
@@ -108,7 +106,7 @@ main .why-chocolates p {
   padding: 20px 0px;
 }
 
-.brand-overviews h2 {
+.brand-overviews h1, h2 {
   padding-top: 20px;
 }
 
