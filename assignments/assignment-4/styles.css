@@ -104,11 +104,41 @@ main .why-chocolates p {
 
 .brand-overviews {
   padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-overviews img {
+  width: 25%;
 }
 
 .brand-overviews h1, h2 {
   padding-top: 20px;
 }
+
+.Cadbury {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.Cadbury .Cadbury-description {
+  flex-direction: column;
+}
+
+
+/* .brand-overviews .Cadbury h3 {
+  text-align: center;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-0%,-410%);
+  font-size: 3em;
+  text-decoration: none;
+  background-color: rgba(161, 69, 7, 0);
+  padding: 10px 30px;
+  border-radius: 20px;
+} */
 
 .honorable-mentions {
   padding: 20px 0px;
