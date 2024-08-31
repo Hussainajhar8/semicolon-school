@@ -36,11 +36,11 @@ main {
   padding: 10px 20px ;
 }
 
-.why-chocolates img {
+.about img {
   width: 100%
 }
 
-main .why-chocolates h2 {
+main .about h2 {
   position: absolute;
   text-align: center;
   color: white;
@@ -54,7 +54,7 @@ main .why-chocolates h2 {
   background-color: rgba(255, 255, 255, 0);
 }
 
-main .why-chocolates p {
+main .about p {
   position: absolute;
   text-align: center;
   color: white;

@@ -9,6 +9,10 @@ h1 , p , a, label, input {
   text-transform: uppercase;
 }
 
+h2 {
+  padding: 20px 1000px;
+}
+
 header {
   display: flex;
   justify-content: space-between;
