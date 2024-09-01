@@ -148,14 +148,21 @@ main .about p {
   flex-direction: column;
 }
 
-.Dark-chocolate {
-  padding-top: 20px;
-  text-align: center;
+.Avoid img {
+  padding-top: 35px;
+  width: 35%;
 }
 
-.Chomp {
-  padding-top: 20px;
+.dc-class, .curly-class, .qs-class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Dark-chocolate, .curly, .Quality-street{
+  padding-top: 10px;
   text-align: center;
+  align-items: center;
 }
 
 .honorable-mentions {
@@ -166,6 +173,70 @@ main .about p {
   padding-top: 20px;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.form label {
+  color: black;
+  font-size: 1.5em;
+  width: 400px;
+  
+}
+
+.form input, textarea {
+  border-color: black;
+  border-width: 5px;
+  border-radius: 5px;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+}
+
+.form form label {
+  color: white;
+}
+
+.form .form-logo {
+  font-size: 96px;
+}
+
 footer {
   text-align: right;
+}
+
+@media (max-width: 636px) {
+  html {
+    font-size: x-small;
+  }
+  main .about h2 {
+    font-size: 1em;
+  }
+
+  main .about p {
+    font-size: 0.75em;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    background-color: aliceblue;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .form form .form-logo {
+    margin-right: 20px;
+  }
+
 }

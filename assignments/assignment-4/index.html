@@ -23,7 +23,7 @@
   </header>
   <main>
     <section id="about" class="about">
-      <img src="Chocolate_Header.webp" alt="">
+      <img src="./chocolates/Chocolate_Header.webp" alt="">
       <h2>I Like Chocolates!</h2>
       <p>I might have a sweet tooth so lets talk about some <s style="background-color: rgba(250, 235, 215, 0);">sweeties</s> chocolates.</p>
     </section>
@@ -120,18 +120,53 @@
 
     <div id="avoid" class="Avoid">
       <h1>Chocolates to Avoid</h1>
-      <div class="Dark-chocolate">
-        <h2 style="display: inline;">Dark Chocolate - Verdict:</h2>
-        <h2 style="display: inline;" class="f-tier"><strong>F-Tier</strong></h2>
-        <p>This category of chocolate is absolutely horrendous; even the S-tier companies can't figure out a solution for this. </p>
+      <div class="dc-class">
+        <img src="./chocolates/dark-chocolate.png" alt="picture of dark chococlate">
+        <div class="Dark-chocolate">
+          <h2 style="display: inline;">Dark Chocolate - Verdict:</h2>
+          <h2 style="display: inline;" class="f-tier"><strong>F-Tier</strong></h2>
+          <p>This category of chocolate is absolutely horrendous; even the S-tier companies can't figure out a solution for this. </p>
+        </div>
       </div>
+      
+      
+      <div class="curly-class">
+        <img src="./chocolates/curly-wurly.png" alt="picture of curly wurly chococlate bar">
+        <div class="curly">
+          <h2 style="display: inline;">Curly Wurly bar - Verdict:</h2>
+          <h2 style="display: inline;" class="d-tier"><strong>D-Tier</strong></h2>
+        <p>This chocolate is not worth the calories, so unless your sweet tooth is starving and wants caramel stuck on it, pass on this one.</p>
+        </div>
+      </div>
+      
 
-      <div class="Chomp">
-        <h2 style="display: inline;">Chomp and Curly Wurly bar - Verdict:</h2>
-        <h2 style="display: inline;" class="d-tier"><strong>D-Tier</strong></h2>
-      <p>These are chocolates not worth the calories, so unless your sweet tooth is starving, pass on this one.</p>
+      <div class="qs-class">
+        <img src="./chocolates/quality-street.webp" alt="picture of quality-street">
+        <div class="Quality-street">
+          <h2 style="display: inline;">Quality Street - Verdict:</h2>
+          <h2 style="display: inline;" class="d-tier"><strong>D-Tier</strong></h2>
+        <p>Probably the worst box of chocolates you can gift to someone, they have some good pieces but there are also too many types people skip on here.</p>
+        </div>
       </div>
     </div>
+
+    <section class="form">
+      <div class="form-logo">
+        <p>🍫</p>
+      </div>
+      <form action="blank">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" required/>
+  
+        <label for="emal">Email</label>
+        <input type="email" id="email" required/>
+  
+        <label for="comments">Chocolates to avoid</label>
+        <textarea name="comments" id="comments" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
   </main>
   <footer>
     <p>&copy; Sweeties 2024</p>
