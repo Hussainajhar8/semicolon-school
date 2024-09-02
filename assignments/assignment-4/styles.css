@@ -211,16 +211,67 @@ footer {
   text-align: right;
 }
 
+@media (max-width: 412px) {
+  html {
+    font-size: x-small;
+  }
+
+  main .about h2 {
+    font-size: 0.5em;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+  }
+
+  main .about p {
+    font-size: 0.5em;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+  }
+
+    h1 {
+    font-size: 0.85em
+  }
+
+  p {
+    font-size: 0.5em;
+  }
+
+  h2 {
+    font-size: 0.85em;
+  }
+}
+
 @media (max-width: 636px) {
   html {
     font-size: x-small;
   }
+
   main .about h2 {
-    font-size: 1em;
+    font-size: 2em;
+    top: 11%;
+    left: 50%;
+    transform: translate(-50%,-20%);
   }
+}
 
   main .about p {
+    font-size: 1.5em;
+    top: 14%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+
+  h1 {
+    font-size: 1em
+  }
+
+  p {
     font-size: 0.75em;
+  }
+
+  h2 {
+    font-size: 1em;
   }
 }
 
