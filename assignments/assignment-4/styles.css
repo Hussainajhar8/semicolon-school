@@ -212,27 +212,31 @@ footer {
 
 @media (max-width: 412px) {
   html {
-    font-size: 10px; /* Reduced base font size for smaller scaling */
+    font-size: xx-small;
+  }
+
+  header ul li {
+    font-size: large;
   }
 
   main .about h2 {
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    font-size: 1em; /* Smaller font size */
-    padding: 5px 15px; /* Adjust padding for smaller text */
+    top: 11% !important;
+    left: 50% !important;
+    transform: translate(-50%, 0) !important;
+    font-size: 1.5em !important;
+    padding: 5px 15px; 
   }
   
   main .about p {
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    font-size: 0.8em; /* Smaller font size */
-    padding: 5px 10px; /* Adjust padding for smaller text */
+    top: 15% !important;
+    left: 50% !important;
+    transform: translate(-50%, 0) !important;
+    font-size: 1em !important; 
+    padding: 5px 10px; 
   }
 
   h1 {
-    font-size: 1em;
+    font-size: 0.5em;
   }
 
   p {
@@ -251,6 +255,10 @@ footer {
 @media (max-width: 636px) {
   html {
     font-size: x-small;
+  }
+
+  header ul li {
+    font-size: larger;
   }
 
   main .about h2 {
