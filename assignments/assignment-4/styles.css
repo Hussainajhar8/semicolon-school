@@ -212,37 +212,39 @@ footer {
 
 @media (max-width: 412px) {
   html {
-    font-size: xx-small;
+    font-size: 10px; /* Reduced base font size for smaller scaling */
   }
 
   main .about h2 {
     top: 10%;
     left: 50%;
-    transform: translate(-50%);
-    font-size: 0.3em;
+    transform: translate(-50%, 0);
+    font-size: 1em; /* Smaller font size */
+    padding: 5px 15px; /* Adjust padding for smaller text */
   }
   
   main .about p {
-    top: 40%;
+    top: 30%;
     left: 50%;
-    transform: translate(-50%,-20%);
-    font-size: 0.3em;
+    transform: translate(-50%, 0);
+    font-size: 0.8em; /* Smaller font size */
+    padding: 5px 10px; /* Adjust padding for smaller text */
   }
 
   h1 {
-    font-size: 0.85em
+    font-size: 1em;
   }
 
   p {
-    font-size: 0.5em;
+    font-size: 0.8em;
   }
 
   h2 {
-    font-size: 0.85em;
+    font-size: 1em;
   }
 
   .form label {
-    width: 300px;
+    width: 250px;
   }
 }
 
