@@ -34,4 +34,61 @@ console.log(fullName)
 
 const countriesInTheUK = ["England","Wales","Scotland","Ireland"]
 
-console.log(countriesInTheUK[0])
+console.log(countriesInTheUK)
+
+
+// Object Literals
+
+const user = {
+  firstName: "Ajhar",
+  surname: "Hussain",
+  age: 24,
+  location: {
+    country: "UK",
+    city: "London",
+  },
+};
+
+console.log(user.age);
+console.log(user.firstName);
+console.log(user.location);
+console.log(user.surname);
+
+// Loops
+
+for(let count = 0; count < 10; count ++) {
+  console.log(`This loop has run ${count} times`);
+}
+
+
+// While loop
+
+let i = 0
+while (i < 10) {
+  console.log(i);
+  i++;
+}
+
+//Get the 1st letter of each county in the countriesintheUK var
+
+// 1st way
+for(let i=0; i < countriesInTheUK.length; i++) {
+  console.log(countriesInTheUK[i].charAt(0));
+}
+
+// 2nd way
+for(let country of countriesInTheUK) {
+  console.log(country.charAt(0));
+}
+
+// 3rd way
+countriesInTheUK.forEach(function firstLetter(country) {
+  console.log(country.charAt(0));
+})
+
+function subtractNumbers(number1, number2) {
+  const sum = number1 - number2
+  return sum
+}
+
+console.log(subtractNumbers(20,6));
