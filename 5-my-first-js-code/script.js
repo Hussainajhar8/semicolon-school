@@ -20,3 +20,18 @@ console.log()
 console.log()
 console.log()
 console.log()
+
+const firstName = "Ajhar";
+const surname = "Hussain";
+
+// const fullName = firstName + " " + surname;
+// const fullName = firstName.concat("").concat(surname);
+const fullName = `${firstName} ${surname}`;
+
+console.log(fullName)
+
+// Arrays
+
+const countriesInTheUK = ["England","Wales","Scotland","Ireland"]
+
+console.log(countriesInTheUK[0])
