@@ -1,25 +1,22 @@
-console.log("Hello");
+console.log("Hello"); // Output: Hello
 
 var flower = "rose";
-
-console.log(flower);
+console.log(flower); // Output: rose
 
 const unchangeable_variable = "Ajhar";
-
-console.log(unchangeable_variable);
+console.log(unchangeable_variable); // Output: Ajhar
 
 let this_change = "blue";
-
 this_change = "red";
+console.log(this_change); // Output: red
 
-console.log(this_change);
+console.log("the type of this_change is " + typeof this_change); // Output: the type of this_change is string
 
-console.log("the type of this_change is " + typeof this_change)
-console.log()
-console.log()
-console.log()
-console.log()
-console.log()
+console.log(); // Output: (empty line)
+console.log(); // Output: (empty line)
+console.log(); // Output: (empty line)
+console.log(); // Output: (empty line)
+console.log(); // Output: (empty line)
 
 const firstName = "Ajhar";
 const surname = "Hussain";
@@ -28,17 +25,14 @@ const surname = "Hussain";
 // const fullName = firstName.concat("").concat(surname);
 const fullName = `${firstName} ${surname}`;
 
-console.log(fullName)
+console.log(fullName); // Output: Ajhar Hussain
 
 // Arrays
+const countriesInTheUK = ["England", "Wales", "Scotland", "Ireland"];
 
-const countriesInTheUK = ["England","Wales","Scotland","Ireland"]
-
-console.log(countriesInTheUK)
-
+console.log(countriesInTheUK); // Output: ["England", "Wales", "Scotland", "Ireland"]
 
 // Object Literals
-
 const user = {
   firstName: "Ajhar",
   surname: "Hussain",
@@ -49,63 +43,66 @@ const user = {
   },
 };
 
-console.log(user.age);
-console.log(user.firstName);
-console.log(user.location);
-console.log(user.surname);
+console.log(user.age); // Output: 24
+console.log(user.firstName); // Output: Ajhar
+console.log(user.location); // Output: { country: 'UK', city: 'London' }
+console.log(user.surname); // Output: Hussain
 
 // Loops
-
-for(let count = 0; count < 10; count ++) {
-  console.log(`This loop has run ${count} times`);
+for (let count = 0; count < 10; count++) {
+  console.log(`This loop has run ${count} times`); 
+  // Output: 
+  // This loop has run 0 times
+  // This loop has run 1 time
+  // This loop has run 2 times
+  // ...
+  // This loop has run 9 times
 }
 
-
 // While loop
-
-let i = 0
+let i = 0;
 while (i < 10) {
-  console.log(i);
+  console.log(i); // Output: 0, 1, 2, 3, ..., 9 (one per line)
   i++;
 }
 
-//Get the 1st letter of each county in the countriesintheUK var
+
+// Get the 1st letter of each country in the countriesInTheUK array
 
 // 1st way
-for(let i=0; i < countriesInTheUK.length; i++) {
-  console.log(countriesInTheUK[i].charAt(0));
+for (let i = 0; i < countriesInTheUK.length; i++) {
+  console.log(countriesInTheUK[i].charAt(0)); 
+  // Output: E, W, S, I (one per line)
 }
 
 // 2nd way
-for(let country of countriesInTheUK) {
-  console.log(country.charAt(0));
+for (let country of countriesInTheUK) {
+  console.log(country.charAt(0)); 
+  // Output: E, W, S, I (one per line)
 }
 
 // 3rd way
 countriesInTheUK.forEach(function firstLetter(country) {
-  console.log(country.charAt(0));
-})
-
+  console.log(country.charAt(0)); 
+  // Output: E, W, S, I (one per line)
+});
 
 // Functions
-
 function subtractNumbers(number1, number2) {
-  const sum = number1 - number2
-  return sum
-}
-
-console.log(subtractNumbers(20,6));
-
-// Arrow Function
-
-const addNumbers = (number1, number2) => {
-  const sum = number1 + number2;
+  const sum = number1 - number2;
   return sum;
 }
 
-console.log(addNumbers(3,6))
+console.log(subtractNumbers(20, 6)); // Output: 14
 
-//Trimmed down arrow function 
+// Arrow Function
+const addNumbers = (number1, number2) => {
+  const sum = number1 + number2;
+  return sum;
+};
 
-const addNumberstrimmed = (num1, num2) => num1 + num2
-console.log(addNumbers(3,2))
+console.log(addNumbers(3, 6)); // Output: 9
+
+// Trimmed down arrow function 
+const addNumberstrimmed = (num1, num2) => num1 + num2;
+console.log(addNumberstrimmed(3,2));
