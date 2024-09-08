@@ -86,9 +86,26 @@ countriesInTheUK.forEach(function firstLetter(country) {
   console.log(country.charAt(0));
 })
 
+
+// Functions
+
 function subtractNumbers(number1, number2) {
   const sum = number1 - number2
   return sum
 }
 
 console.log(subtractNumbers(20,6));
+
+// Arrow Function
+
+const addNumbers = (number1, number2) => {
+  const sum = number1 + number2;
+  return sum;
+}
+
+console.log(addNumbers(3,6))
+
+//Trimmed down arrow function 
+
+const addNumberstrimmed = (num1, num2) => num1 + num2
+console.log(addNumbers(3,2))
