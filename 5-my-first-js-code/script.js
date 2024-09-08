@@ -87,6 +87,11 @@ countriesInTheUK.forEach(function firstLetter(country) {
   // Output: E, W, S, I (one per line)
 });
 
+// 4th way
+countriesInTheUK.forEach((country) => console.log(country.charAt(0)));
+// Output: E, W, S, I (one per line)
+
+
 // Functions
 function subtractNumbers(number1, number2) {
   const sum = number1 - number2;
@@ -106,3 +111,35 @@ console.log(addNumbers(3, 6)); // Output: 9
 // Trimmed down arrow function 
 const addNumberstrimmed = (num1, num2) => num1 + num2;
 console.log(addNumberstrimmed(3,2));
+
+
+// Conditionals
+const countriesInTheUk = ["England", "Wales", "Scotland", "Northern Ireland"];
+
+if (countriesInTheUk[0] === "Wales") {
+    console.log("This is Wales");
+} else if (countriesInTheUk[0] === "Scotland") {
+    console.log("This is Scotland");
+} else {
+    console.log("This is not Wales or Scotland");
+}
+
+const myAgeAsAString = "28";
+const myAgeAsANumber = 28;
+
+if (myAgeAsANumber == myAgeAsAString) {
+  console.log("These values & types are the same"); // Output: "These values & types are the same"
+}
+
+if (myAgeAsANumber === myAgeAsAString) {
+    console.log("These values & types are the same"); // Output: No output
+}
+// Triple equal ("===") is more strict than double equals ("==")
+
+
+// Ternary
+// condition ? output you want if true : output you want if false
+
+const myAge = 28
+const myBadgeColor = myAge >= 20 ? "Blue" : "Green" ;
+console.log(myBadgeColor) // Output Blue
