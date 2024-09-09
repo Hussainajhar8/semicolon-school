@@ -93,11 +93,13 @@ if (isBeginnerCourse && maxStudents > 25) {
 //   console.log(topicArray)
 // })}; doesn't work returns bools
 
-topics.forEach(function firstLetter(topicArray) {
-  if (console.log(topicArray.length > 5)) {
-    console.log(topicArray);
+topics.forEach(function filterTopics(topicArray) {
+  if (topicArray.length > 5) {
+    return console.log(topicArray);
   } 
-}); // doesn't work returns bools
+});
+
+// doesn't work returns bools
 
 // 3. Use a while loop to simulate a simple quiz game
 

@@ -122,7 +122,8 @@ if (countriesInTheUk[0] === "Wales") {
     console.log("This is Scotland");
 } else {
     console.log("This is not Wales or Scotland");
-}
+} // Output: "This is not Wales or Scotland"
+
 
 const myAgeAsAString = "28";
 const myAgeAsANumber = 28;
