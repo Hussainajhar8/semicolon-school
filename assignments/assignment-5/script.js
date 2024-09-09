@@ -97,21 +97,19 @@ topics.forEach(function filterTopics(topicArray) {
   if (topicArray.length > 5) {
     return console.log(topicArray);
   } 
-});
-
-// doesn't work returns bools
+}); // It Works!
 
 // 3. Use a while loop to simulate a simple quiz game
 
-// let score = 0;
-// while (score < 1) {
-//   answer = String(prompt("Whats 9+10?"))
-//   if (answer === "19" || answer === "21") {
-//     score++
-//     console.log("Correct , well done")
-//   } 
-//   else console.log("Incorrect, try again.")
-// }
+let score = 0;
+while (score < 1) {
+  answer = String(prompt("Whats 9+10?"))
+  if (answer === "19" || answer === "21") {
+    score++
+    console.log("Correct , well done")
+  } 
+  else console.log("Incorrect, try again.")
+}
 
 // 4. Implement a switch statement to provide different messages based on the number of topics
 
