@@ -48,6 +48,8 @@ button.addEventListener("click", function (event) {
 
     li.textContent = ingredientName;
     ul.appendChild(li);
+    
+    li.innerHTML = `${ingredientName} <button>X</button>`;
 
     input.value = "";
   }
