@@ -149,3 +149,4 @@ const isEverythingAVegetable = cupboardItems.every(
 );
 
 console.log(`Is everything a vegatable? ${isEverythingAVegetable}`);
+console.log(`Is everything a vegetable? ${isEverythingAVegetable}`)
