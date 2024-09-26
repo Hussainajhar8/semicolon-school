@@ -1,9 +1,9 @@
 // Function to add a task
 function addTask() {
   // Get the input element and task list
-  var input = document.getElementById('taskInput');
-  var taskValue = input.value.trim();  // Trim input to remove extra spaces
-  var list = document.getElementById('taskList');
+  const input = document.getElementById('taskInput');
+  const taskValue = input.value.trim();  // Trim input to remove extra spaces
+  const list = document.getElementById('taskList');
 
   // Error handling: Check if the input is empty
   if (taskValue === "") {
@@ -12,11 +12,11 @@ function addTask() {
   }
 
   // Create a new list item (li) and a text node for the task
-  var newItem = document.createElement('li');
-  var taskText = document.createTextNode(taskValue);  // Text node for the task description
+  const newItem = document.createElement('li');
+  const taskText = document.createTextNode(taskValue);  // Text node for the task description
 
   // Create a delete button for the task
-  var deleteButton = document.createElement('button');
+  const deleteButton = document.createElement('button');
   deleteButton.textContent = 'Delete';  // Set button text
   deleteButton.className = 'delete-btn';  // Add a class for styling if needed
 
@@ -49,16 +49,16 @@ function completeTask(event) {
 // Function to delete a task
 function deleteTask(event) {
   event.stopPropagation();  // Stop the click event from bubbling up to the list item (prevents triggering completeTask)
-  var taskToDelete = event.target.parentElement;  // Get the parent list item (li) of the clicked delete button
+  const taskToDelete = event.target.parentElement;  // Get the parent list item (li) of the clicked delete button
   taskToDelete.remove();  // Remove the task (li) from the DOM
 }
 
 // Optional: Function to edit a task when clicked
 function editTask(event) {
-  var taskToEdit = event.target;  // The task item (li) that was clicked
+  const taskToEdit = event.target;  // The task item (li) that was clicked
   if (taskToEdit.tagName === 'LI') {
       // Prompt the user to edit the task text
-      var newTaskValue = prompt("Edit your task:", taskToEdit.textContent.replace('Delete', '').trim());  // Remove 'Delete' from the text
+      const newTaskValue = prompt("Edit your task:", taskToEdit.textContent.replace('Delete', '').trim());  // Remove 'Delete' from the text
       if (newTaskValue) {
           taskToEdit.firstChild.nodeValue = newTaskValue;  // Update the text node with the new task value
       }
@@ -71,7 +71,7 @@ document.querySelectorAll('#taskList li').forEach(function(task) {
   task.addEventListener('click', completeTask);
 
   // Create and add the delete button for each existing task
-  var deleteButton = document.createElement('button');
+  const deleteButton = document.createElement('button');
   deleteButton.textContent = 'Delete';  // Set button text
   deleteButton.className = 'delete-btn';  // Add class for styling if needed
   task.appendChild(deleteButton);  // Append the delete button to the list item (li)
