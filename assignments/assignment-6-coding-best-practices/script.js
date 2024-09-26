@@ -1,51 +1,52 @@
-const todos = []
-const c = 0
+var toDoList = []
 
-function a(t) {
-  const todo = {
-    id: c,
-    task: t,
+var numberOfTask = 0
+
+function addTask(task) {
+  var toDo = {
+    id: numberOfTask,
+    task: task,
     done: false
   }
-  todos.push(todo)
-  c = c + 1
-  console.log('Added: ' + t)
+  toDoList.push(toDo)
+  numberOfTask = numberOfTask + 1
+  console.log('Added: ' + task)
 }
 
-function b(id) {
-  for (const i = 0; i < todos.length; i++) {
-    if (todos[i].id == id) {
-      todos[i].done = true
-      console.log('Completed: ' + todos[i].task)
+function checkOffTask(id) {
+  for (var i = 0; i < toDoList.length; i++) {
+    if (toDoList[i].id == id) {
+      toDoList[i].done = true
+      console.log('Completed: ' + toDoList[i].task)
       return
     }
   }
   console.log('Not found')
 }
 
-function c(id) {
-  for (const i = 0; i < todos.length; i++) {
-    if (todos[i].id == id) {
-      const d = todos.splice(i, 1)
-      console.log('Deleted: ' + d[0].task)
+function dismissTask(id) {
+  for (var i = 0; i < toDoList.length; i++) {
+    if (toDoList[i].id == id) {
+      var dismiss = toDoList.splice(i, 1)
+      console.log('Deleted: ' + dismiss[0].task)
       return
     }
   }
   console.log('Not found')
 }
 
-function d() {
-  console.log('Todo list:')
-  for (const i = 0; i < todos.length; i++) {
-    const s = todos[i].done ? 'Done' : 'Pending'
-    console.log(todos[i].id + ': ' + todos[i].task + ' - ' + s)
+function displayTasks() {
+  console.log('toDo list:')
+  for (var i = 0; i < toDoList.length; i++) {
+    var taskStatus = toDoList[i].done ? 'Done' : 'Pending'
+    console.log(toDoList[i].id + ': ' + toDoList[i].task + ' - ' + taskStatus)
   }
 }
 
 // Usage
-a('Buy groceries')
-a('Finish homework')
-b(0)
-d()
-c(1)
-d()
+addTask('Buy groceries')
+addTask('Finish homework')
+checkOffTask(0)
+displayTasks()
+dismissTask(1)
+displayTasks()
