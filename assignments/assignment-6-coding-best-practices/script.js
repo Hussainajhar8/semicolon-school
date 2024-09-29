@@ -1,9 +1,9 @@
-var toDoList = []
+let toDoList = []
 
-var numberOfTask = 0
+let numberOfTask = 0
 
 function addTask(task) {
-  var toDo = {
+  let toDo = {
     id: numberOfTask,
     task: task,
     done: false
@@ -14,7 +14,7 @@ function addTask(task) {
 }
 
 function checkOffTask(id) {
-  for (var i = 0; i < toDoList.length; i++) {
+  for (let i = 0; i < toDoList.length; i++) {
     if (toDoList[i].id == id) {
       toDoList[i].done = true
       console.log('Completed: ' + toDoList[i].task)
@@ -25,9 +25,9 @@ function checkOffTask(id) {
 }
 
 function dismissTask(id) {
-  for (var i = 0; i < toDoList.length; i++) {
+  for (let i = 0; i < toDoList.length; i++) {
     if (toDoList[i].id == id) {
-      var dismiss = toDoList.splice(i, 1)
+      let dismiss = toDoList.splice(i, 1)
       console.log('Deleted: ' + dismiss[0].task)
       return
     }
@@ -37,8 +37,8 @@ function dismissTask(id) {
 
 function displayTasks() {
   console.log('toDo list:')
-  for (var i = 0; i < toDoList.length; i++) {
-    var taskStatus = toDoList[i].done ? 'Done' : 'Pending'
+  for (let i = 0; i < toDoList.length; i++) {
+    let taskStatus = toDoList[i].done ? 'Done' : 'Pending'
     console.log(toDoList[i].id + ': ' + toDoList[i].task + ' - ' + taskStatus)
   }
 }
