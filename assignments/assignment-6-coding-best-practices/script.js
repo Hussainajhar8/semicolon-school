@@ -27,7 +27,7 @@ function checkOffTask(id) {
 function dismissTask(id) {
   for (let i = 0; i < toDoList.length; i++) {
     if (toDoList[i].id == id) {
-      let dismiss = toDoList.splice(i, 1)
+      const dismiss = toDoList.splice(i, 1)
       console.log('Deleted: ' + dismiss[0].task)
       return
     }
@@ -38,7 +38,7 @@ function dismissTask(id) {
 function displayTasks() {
   console.log('toDo list:')
   for (let i = 0; i < toDoList.length; i++) {
-    let taskStatus = toDoList[i].done ? 'Done' : 'Pending'
+    const taskStatus = toDoList[i].done ? 'Done' : 'Pending'
     console.log(toDoList[i].id + ': ' + toDoList[i].task + ' - ' + taskStatus)
   }
 }
