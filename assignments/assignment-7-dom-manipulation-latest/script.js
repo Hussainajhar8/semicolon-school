@@ -5,7 +5,7 @@ function addTask() {
 
 // Step 1a - Check if the input is empty before adding a task
   if (input.value.trim() === "") {
-    console.log("Empty string, please add a task.");
+    alert("Empty string, please add a task.");
     return;
 }
 
