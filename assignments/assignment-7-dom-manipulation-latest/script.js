@@ -24,18 +24,16 @@ function addTask() {
   createDeleteButton(newItem) // Calls the createDeleteButton function which was created for the querySelectorAll task
   list.append(newItem) // Adds the new task to the list
 
-// // Step 2e - Make it listen to a click event on each task
-//   newItem.addEventListener('click', function() {
-//     completeTask(newItem)
-//   });
+// Step 2e - Make it listen to a click event on each task
+  newItem.addEventListener('click', function() {
+    completeTask(newItem)
+  });
 
 // // Step 3
 //   deleteButton.addEventListener('click', function(event) { // Step 3g - Make it listen to the delete button for each task
 //     event.stopPropagation(); // Prevent the click event from bubbling up to the <li>
 //     newItem.remove() // Step 3f - It should remove the task from the list
 //   })
-
-  selectAllTasks(); // Called function from step 5
 
   input.value = "";
 
@@ -79,3 +77,5 @@ function createDeleteButton(task) {
 
   task.appendChild(deleteButton); // Append the delete button to the task (li)
 }
+
+selectAllTasks(); // Called function from step 5
