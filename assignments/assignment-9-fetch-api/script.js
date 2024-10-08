@@ -1,7 +1,6 @@
 const URL = `https://api.thecatapi.com/v1/images/search?limit=33`;
-const api_key = "live_mT8nAuW1TOadD0wy8eu6uqN9XATGlYlivfptw4rbhYVdhIVu5a7a4rnYbwbYjpE6"
 
-fetch(URL,{headers: {'x-api-key': api_key}})
+fetch(URL)
 .then((response) => { 
   return response.json();
 })
