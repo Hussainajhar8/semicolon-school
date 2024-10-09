@@ -1,0 +1,67 @@
+/* Set the background color for the body */
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f8ff; /* Light, relaxing background color */
+}
+
+/* Center and style the joke container */
+#jokeDiv {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Style the title */
+#jokeDiv::before {
+  content: "Dad Jokes 101";
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 15px;
+  color: #333;
+  font-family: 'Comic Sans MS', sans-serif; /* A fun font */
+}
+
+/* Style the joke text */
+#jokeText {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Style the button */
+#getNewJoke {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#getNewJoke:hover {
+  background-color: #0056b3;
+}
+
+/* Make it responsive on smaller devices */
+@media (max-width: 600px) {
+  #jokeDiv {
+    padding: 20px;
+  }
+
+  #getNewJoke {
+    width: 100%;
+  }
+}

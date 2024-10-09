@@ -1,24 +1,18 @@
-const URL = `https://api.thecatapi.com/v1/images/search?limit=33`;
+const URL = `https://icanhazdadjoke.com/`;
 
-fetch(URL)
-.then(response => response.json())
-.then(data => {
-  let imagesData = data;
-  imagesData.map(function(imageData) {
-    
-    let image = document.createElement('img');
-    //use the url from the image object
-    image.src = `${imageData.url}`;
-        
-    let gridCell = document.createElement('div');
-    gridCell.classList.add('col');
-    gridCell.classList.add('col-lg');
-    gridCell.appendChild(image)
-      
-    document.getElementById('grid').appendChild(gridCell);
-    
-    });
-})
-.catch(function(error) {
-   console.log(error);
-});
+const containerDiv = document.getElementById("jokeDiv");
+const jokeP = document.getElementById("jokeText");
+
+function fetchJoke() {
+  jokeP.textContent = "Loading your joke...";
+  
+  fetch(URL, { headers: {'Accept':'application/json'}})
+  .then(response => response.json())
+  .then(data => {
+    jokeP.textContent = data.joke;
+  });
+}
+fetchJoke();
+
+const jokeButton = document.getElementById("getNewJoke");
+jokeButton.addEventListener("click", fetchJoke);
