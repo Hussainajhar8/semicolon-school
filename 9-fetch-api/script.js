@@ -1,4 +1,4 @@
-const URL = `https://dummyjson.com/posts`
+const URL = `https://dummyjson.com/posts`;
 const containerDiv = document.getElementById("container");
 
 const loadingH2 = document.createElement('h2')
@@ -16,8 +16,8 @@ fetch(URL)
 
     const titleH2 = document.createElement("h2");
     const bodyP = document.createElement("p");
-    const likesSpan = document.createElement("span")
-    const dislikesSpan = document.createElement("span")
+    const likesSpan = document.createElement("span");
+    const dislikesSpan = document.createElement("span");
     
     titleH2.textContent = post.title;
     bodyP.textContent = post.body;

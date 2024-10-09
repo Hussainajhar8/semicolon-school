@@ -6,7 +6,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f0f8ff; /* Light, relaxing background color */
+  background-color: #f0f8ff; 
 }
 
 /* Center and style the joke container */
@@ -21,19 +21,18 @@ body {
 }
 
 /* Style the title */
-#jokeDiv::before {
-  content: "Dad Jokes 101";
-  font-size: 2rem;
+#jokeDiv h2 {
+  font-size: 3em;
   font-weight: bold;
   display: block;
   margin-bottom: 15px;
   color: #333;
-  font-family: 'Comic Sans MS', sans-serif; /* A fun font */
+  font-family: 'Comic Sans MS', sans-serif; 
 }
 
 /* Style the joke text */
 #jokeText {
-  font-size: 1.2rem;
+  font-size: 2em;
   color: #444;
   margin-bottom: 20px;
   line-height: 1.5;
@@ -45,8 +44,9 @@ body {
   color: white;
   border: none;
   padding: 10px 20px;
+  margin-left: 40px;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1.5em;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
