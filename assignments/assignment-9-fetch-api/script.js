@@ -1,10 +1,8 @@
 const URL = `https://api.thecatapi.com/v1/images/search?limit=33`;
 
 fetch(URL)
-.then((response) => { 
-  return response.json();
-})
-.then((data) => {
+.then(response => response.json())
+.then(data => {
   let imagesData = data;
   imagesData.map(function(imageData) {
     
