@@ -1,12 +1,12 @@
 /* Set the background color for the body */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f0f8ff; 
+  background-color: #f0f8ff;
 }
 
 /* Center and style the joke container */
@@ -27,7 +27,7 @@ body {
   display: block;
   margin-bottom: 15px;
   color: #333;
-  font-family: 'Comic Sans MS', sans-serif; 
+  font-family: "Comic Sans MS", sans-serif;
 }
 
 /* Style the joke text */
@@ -40,7 +40,7 @@ body {
 
 /* Style the button */
 #getNewJoke {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
   border: none;
   padding: 10px 20px;
