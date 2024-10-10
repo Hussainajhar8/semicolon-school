@@ -9,12 +9,14 @@
   <body>
     <div id="header">
       <h1>Ajhar's Cook Book</h1>
-      <input
-        type="text"
-        id="ingredientInput"
-        placeholder="Enter an ingredient to find matching recipes!"
-      />
-      <button onclick="findRecipe()">Find Recipe</button>
+      <div class="input-button-container">
+        <input
+          type="text"
+          id="ingredientInput"
+          placeholder="Enter an ingredient to find matching recipes!"
+        />
+        <button onclick="findRecipe()">Find Recipe</button>
+      </div>
     </div>
     <div id="recipesContainer"></div>
   </body>

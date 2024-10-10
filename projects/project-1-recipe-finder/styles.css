@@ -12,7 +12,7 @@ body {
 /* Center header content */
 #header {
   display: flex;
-  flex-direction: column; /* Stack title, input, and button */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
@@ -20,14 +20,15 @@ body {
 
 #header h1 {
   font-size: 2.5em;
-  margin-bottom: 20px; /* Add some spacing below the title */
+  margin-bottom: 20px;
 }
 
-/* Centering the input and button side by side */
+/* Flex container for input and button to make them side by side */
 .input-button-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px; /* Adds space between input and button */
 }
 
 #header input {
@@ -37,9 +38,7 @@ body {
   border-radius: 5px;
   font-size: 1em;
   height: 50px;
-  width: 300px;
-  margin-right: 10px; /* Space between input and button */
-  transition: background-color 0.3s ease;
+  width: 350px;
   background-color: #f0f8ff;
 }
 
@@ -50,29 +49,36 @@ body {
   border-radius: 5px;
   font-size: 1.5em;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   background-color: #f0f8ff;
+  height: 50px; /* Match the input height */
 }
 
 /* Grid layout for recipe cards */
 #recipesContainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 20px; /* Space between grid items */
+  grid-template-columns: repeat(4, 1fr); /* 3 equal-width columns */
+  gap: 20px;
   padding: 20px;
-  justify-items: center; /* Center grid items horizontally */
+  justify-items: center;
 }
 
+/* Recipe card styling */
 #recipesContainer div {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  text-align: center; /* Center text and images */
+  padding: 20px;
+  text-align: center;
+  width: 300px; /* Fixed width for uniformity */
+  height: 350px; /* Fixed height for all cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #recipesContainer img {
   max-width: 100%;
+  max-height: 180px; /* Ensure the image fits in the card */
+  object-fit: cover; /* Crop the image if necessary */
   border-radius: 8px;
-  margin-top: 10px;
 }
