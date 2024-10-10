@@ -7,27 +7,38 @@
 
 body {
   font-family: "Arial", sans-serif;
+}
+
+/* Center header content */
+#header {
   display: flex;
+  flex-direction: column; /* Stack title, input, and button */
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin-top: 30px;
 }
 
 #header h1 {
   font-size: 2.5em;
-  margin-left: 160px;
+  margin-bottom: 20px; /* Add some spacing below the title */
+}
+
+/* Centering the input and button side by side */
+.input-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #header input {
   color: rgb(1, 146, 172);
   border: none;
   padding: 10px 20px;
-  margin-left: 40px;
   border-radius: 5px;
   font-size: 1em;
   height: 50px;
-  width: 400px;
-  cursor: pointer;
+  width: 300px;
+  margin-right: 10px; /* Space between input and button */
   transition: background-color 0.3s ease;
   background-color: #f0f8ff;
 }
@@ -41,4 +52,27 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
   background-color: #f0f8ff;
+}
+
+/* Grid layout for recipe cards */
+#recipesContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Space between grid items */
+  padding: 20px;
+  justify-items: center; /* Center grid items horizontally */
+}
+
+#recipesContainer div {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center; /* Center text and images */
+}
+
+#recipesContainer img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
 }
