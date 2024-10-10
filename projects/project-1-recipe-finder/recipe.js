@@ -16,7 +16,6 @@ if (recipeId) {
       // Create and display the recipe details
       const recipeTitle = document.createElement("h2");
       const recipeImage = document.createElement("img");
-      // const recipeInstructions = document.createElement("div");
 
       // Recipe Title
       recipeTitle.textContent = data.title;
@@ -24,6 +23,63 @@ if (recipeId) {
       // Recipe Image
       recipeImage.src = data.image;
       recipeImage.alt = data.title;
+      recipeImage.classList.add("recipe-image");
+
+      // Create a container to hold the image and buttons in a flexbox
+      const imageButtonContainer = document.createElement("div");
+      imageButtonContainer.classList.add("image-button-container");
+
+      // Create a container for the buttons
+      const buttonContainer = document.createElement("div");
+      buttonContainer.classList.add("button-container");
+
+      // Favourite Button
+      const favouriteButton = document.createElement("button");
+      favouriteButton.textContent = "⭐";
+      favouriteButton.classList.add("favourite-button");
+
+      // Unfavourite Button
+      const unfavouriteButton = document.createElement("button");
+      unfavouriteButton.textContent = "💔";
+      unfavouriteButton.classList.add("unfavourite-button");
+
+      // Get favourites from localStorage
+      const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+      if (favourites.includes(recipeId)) {
+        favouriteButton.disabled = true;
+      } else {
+        unfavouriteButton.disabled = true;
+      }
+
+      // Favourite button logic
+      favouriteButton.onclick = function () {
+        let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+        if (!favourites.includes(recipeId)) {
+          favourites.push(recipeId);
+          localStorage.setItem("favourites", JSON.stringify(favourites));
+          alert("Recipe added to favourites!");
+          favouriteButton.disabled = true;
+          unfavouriteButton.disabled = false;
+        }
+      };
+
+      // Unfavourite button logic
+      unfavouriteButton.onclick = function () {
+        let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+        favourites = favourites.filter((id) => id !== recipeId);
+        localStorage.setItem("favourites", JSON.stringify(favourites));
+        alert("Recipe removed from favourites!");
+        unfavouriteButton.disabled = true;
+        favouriteButton.disabled = false;
+      };
+
+      // Append buttons to the button container
+      buttonContainer.appendChild(favouriteButton);
+      buttonContainer.appendChild(unfavouriteButton);
+
+      // Append image and button container to the imageButtonContainer
+      imageButtonContainer.appendChild(recipeImage);
+      imageButtonContainer.appendChild(buttonContainer);
 
       // Ready in X minutes
       const readyIn = document.createElement("p");
@@ -57,58 +113,9 @@ if (recipeId) {
         instructionsList.textContent = "No instructions available.";
       }
 
-      // Create a container for the favourite/unfavourite buttons
-      const buttonContainer = document.createElement("div");
-      buttonContainer.style.display = "flex";
-      buttonContainer.style.flexDirection = "column";
-      buttonContainer.style.marginTop = "10px";
-
-      // Favourite Button
-      const favouriteButton = document.createElement("button");
-      favouriteButton.textContent = "Favourite ⭐";
-      favouriteButton.style.marginBottom = "10px"; // Add space between buttons
-
-      // Unfavourite Button
-      const unfavouriteButton = document.createElement("button");
-      unfavouriteButton.textContent = "Unfavourite 💔";
-
-      // Get favourites from localStorage
-      const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
-      if (favourites.includes(recipeId)) {
-        favouriteButton.disabled = true;
-      } else {
-        unfavouriteButton.disabled = true;
-      }
-
-      // Favourite button logic
-      favouriteButton.onclick = function () {
-        let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
-        if (!favourites.includes(recipeId)) {
-          favourites.push(recipeId);
-          localStorage.setItem("favourites", JSON.stringify(favourites));
-          alert("Recipe added to favourites!");
-          favouriteButton.disabled = true;
-          unfavouriteButton.disabled = false;
-        }
-      };
-
-      // Unfavourite button logic
-      unfavouriteButton.onclick = function () {
-        let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
-        favourites = favourites.filter((id) => id !== recipeId);
-        localStorage.setItem("favourites", JSON.stringify(favourites));
-        alert("Recipe removed from favourites!");
-        unfavouriteButton.disabled = true;
-        favouriteButton.disabled = false;
-      };
-
-      buttonContainer.appendChild(favouriteButton);
-      buttonContainer.appendChild(unfavouriteButton);
-
       // Append everything to the container
       recipeDetailsContainer.appendChild(recipeTitle);
-      recipeDetailsContainer.appendChild(recipeImage);
-      recipeDetailsContainer.appendChild(buttonContainer);
+      recipeDetailsContainer.appendChild(imageButtonContainer); // Image and buttons are added together
       recipeDetailsContainer.appendChild(readyIn);
       recipeDetailsContainer.appendChild(ingredientsTitle);
       recipeDetailsContainer.appendChild(ingredientsList);

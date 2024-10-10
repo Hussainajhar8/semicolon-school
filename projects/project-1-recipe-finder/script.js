@@ -30,14 +30,14 @@ function findRecipe() {
 
         // View Details Button
         const viewDetailsButton = document.createElement("button");
-        viewDetailsButton.textContent = "View Details";
+        viewDetailsButton.textContent = "👁";
         viewDetailsButton.onclick = function () {
           viewDetails(recipe.id); // Pass the recipe ID to the function
         };
 
         // Favourite and Unfavourite Buttons
         const favouriteButton = document.createElement("button");
-        favouriteButton.textContent = "Favourite ⭐";
+        favouriteButton.textContent = "⭐";
         favouriteButton.onclick = function () {
           favouriteRecipe(recipe.id);
           favouriteButton.disabled = true; // Disable the button when favorited
@@ -45,7 +45,7 @@ function findRecipe() {
         };
 
         const unfavouriteButton = document.createElement("button");
-        unfavouriteButton.textContent = "Unfavourite 💔";
+        unfavouriteButton.textContent = "💔";
         unfavouriteButton.disabled = true; // Initially disable the unfavorite button
         unfavouriteButton.onclick = function () {
           unfavouriteRecipe(recipe.id);

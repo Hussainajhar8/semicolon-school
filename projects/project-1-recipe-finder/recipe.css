@@ -9,70 +9,6 @@ body {
   font-family: "Arial", sans-serif;
 }
 
-/* Header Styles */
-#header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
-}
-
-#header h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.input-button-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-#header input,
-#header button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #f0f8ff;
-  color: rgb(1, 146, 172);
-  font-size: 1em;
-  height: 50px;
-}
-
-#header button {
-  font-size: 1.5em;
-}
-
-/* Recipe Cards */
-#recipesContainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 20px;
-  justify-items: center;
-}
-
-#recipesContainer div {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  width: 300px;
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#recipesContainer img {
-  max-width: 100%;
-  max-height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-/* Recipe Details */
 #recipeDetailsContainer {
   max-width: 800px;
   margin: 0 auto;
@@ -101,11 +37,6 @@ body {
   display: flex;
   align-items: flex-start;
   margin-bottom: 20px;
-}
-
-.recipe-image {
-  width: 300px;
-  margin-right: 20px;
 }
 
 .button-container {
@@ -175,19 +106,6 @@ body {
   color: #00796b;
 }
 
-/* Button Styles */
-#recipeDetails button {
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  padding: 10px 15px;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-
-#recipeDetails button:hover {
-  background-color: #d9d9d9;
-}
-
 /* Responsive Styles */
 @media (max-width: 1024px) {
   #recipeDetailsContainer {
@@ -200,25 +118,12 @@ body {
 }
 
 @media (max-width: 768px) {
-  #header input,
-  #header button {
-    width: 100%;
-  }
-
-  .input-button-container {
-    flex-direction: column;
-  }
-
   #recipeDetailsContainer img {
     width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  #header h1 {
-    font-size: 1.8em;
-  }
-
   #recipeDetailsContainer {
     padding: 5px;
   }
