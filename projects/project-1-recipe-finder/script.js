@@ -4,6 +4,12 @@ function findRecipe() {
   const ingredient = document.getElementById("ingredientInput").value;
   const API_KEY = "e7de16f7bac848eea2b236419df00ed5";
   const URL = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredient}&apiKey=${API_KEY}`;
+
+  if (ingredient.trim() === "") {
+    alert("Empty String, please enter a valid ingredient");
+    return;
+  }
+
   fetch(URL)
     .then((response) => response.json())
     .then((data) => {
