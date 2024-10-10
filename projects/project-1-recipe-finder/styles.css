@@ -80,45 +80,197 @@ body {
 }
 
 #recipesContainer img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 100%;
   max-height: 180px; /* Ensure the image fits in the card */
   object-fit: cover; /* Crop the image if necessary */
   border-radius: 8px;
 }
 
+/* Recipe Details Container */
+#recipeDetailsContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Recipe Title */
+#recipeDetailsContainer h2 {
+  font-size: 2.2em;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Recipe Image */
+#recipeDetailsContainer img {
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+  width: 80%; /* Adjust the width to a comfortable size */
+  max-width: 400px; /* Set a max width so it doesn't get too large */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better aesthetics */
+}
+/* Ready in X time */
+#recipeDetailsContainer p {
+  font-size: 1.5em;
+  color: #555;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* Ingredients Section */
+#recipeDetailsContainer h3 {
+  font-size: 1.8em;
+  color: black;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* Ingredients List */
+#recipeDetailsContainer ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#recipeDetailsContainer ul li {
+  font-size: 1.1em;
+  color: #333;
+  padding: 5px 0;
+}
+
+/* Instructions Section */
+#recipeDetailsContainer ol {
+  counter-reset: step-counter;
+  padding-left: 0;
+  margin-left: 20px;
+  list-style-type: none; /* Remove default numbering */
+}
+
+#recipeDetailsContainer ol li {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+}
+
+#recipeDetailsContainer ol li::before {
+  counter-increment: step-counter;
+  content: counter(step-counter) ".";
+  position: absolute;
+  left: 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #00796b;
+}
+
+#recipeDetails button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#recipeDetails button:hover {
+  background-color: #d9d9d9;
+}
+
+#recipeDetails div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
 /* Responsive adjustments for smaller screens */
 @media (max-width: 1024px) {
-  #recipesContainer {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  /* Make sure the recipe details container adjusts for medium screens */
+  #recipeDetailsContainer {
+    padding: 15px;
   }
 
-  #header input {
-    width: 250px; /* Slightly narrower input for smaller screens */
+  /* Adjust recipe image size for medium screens */
+  #recipeDetailsContainer img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Slightly narrower instructions container */
+  #recipeDetailsContainer .instructions,
+  #recipeDetailsContainer .ingredients {
+    padding: 10px;
   }
 }
 
 @media (max-width: 768px) {
-  #recipesContainer {
-    grid-template-columns: 1fr; /* 1 column for small screens */
+  /* For small screens, make the container more flexible */
+  #recipeDetailsContainer {
+    padding: 10px;
   }
 
+  /* Stack input and button on top of each other for smaller screens */
   #header input,
   #header button {
-    width: 100%; /* Input and button will take full width */
+    width: 100%;
     margin-bottom: 10px;
   }
 
   .input-button-container {
-    flex-direction: column; /* Stack input and button on top of each other */
+    flex-direction: column; /* Stack input and button */
+  }
+
+  /* Recipe image and details layout for small screens */
+  #recipeDetailsContainer img {
+    width: 100%; /* Full width image */
+    height: auto;
+  }
+
+  #recipeDetailsContainer .recipe-summary {
+    font-size: 1em;
+  }
+
+  #recipeDetailsContainer .instructions,
+  #recipeDetailsContainer .ingredients {
+    font-size: 1em;
   }
 }
 
 @media (max-width: 480px) {
+  /* Adjust title size for very small screens */
   #header h1 {
-    font-size: 1.8em; /* Adjust title size for very small screens */
+    font-size: 1.8em;
   }
 
-  #recipesContainer div {
-    width: 90%; /* Make recipe cards responsive to screen width */
+  /* Make instructions and ingredients fit better on very small screens */
+  #recipeDetailsContainer {
+    padding: 5px;
+  }
+
+  #recipeDetailsContainer .instructions,
+  #recipeDetailsContainer .ingredients {
+    padding: 5px;
+    font-size: 0.9em; /* Slightly smaller font for better readability */
+  }
+
+  /* Recipe image adjustments for very small screens */
+  #recipeDetailsContainer img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Recipe card responsiveness */
+  #recipeDetailsContainer div {
+    width: 90%; /* Ensure the recipe card fits well on small screens */
   }
 }
