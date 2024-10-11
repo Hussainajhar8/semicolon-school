@@ -99,3 +99,11 @@ function unfavouriteRecipe(recipeId) {
   localStorage.setItem("favourites", JSON.stringify(favourites));
   alert("Recipe removed from favourites!");
 }
+
+function goToFavourites() {
+  window.location.href = "favourites.html";
+}
+
+function goToHome() {
+  window.location.href = "index.html";
+}
