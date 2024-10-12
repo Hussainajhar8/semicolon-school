@@ -21,6 +21,7 @@ function findRecipe() {
 
       data.forEach((recipe) => {
         const recipeDiv = document.createElement("div");
+        const buttonDiv = document.createElement("section");
         const recipeTitle = document.createElement("h2");
         const recipeImage = document.createElement("img");
 
@@ -62,9 +63,10 @@ function findRecipe() {
         // Append elements to the recipeDiv
         recipeDiv.appendChild(recipeTitle);
         recipeDiv.appendChild(recipeImage);
-        recipeDiv.appendChild(viewDetailsButton);
-        recipeDiv.appendChild(favouriteButton);
-        recipeDiv.appendChild(unfavouriteButton);
+        buttonDiv.appendChild(viewDetailsButton);
+        buttonDiv.appendChild(favouriteButton);
+        buttonDiv.appendChild(unfavouriteButton);
+        recipeDiv.appendChild(buttonDiv);
 
         containerDiv.appendChild(recipeDiv); // Add recipeDiv to the container
       });

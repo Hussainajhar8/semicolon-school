@@ -23,9 +23,44 @@ function displayFavourites() {
         recipeImage.src = recipe.image;
         recipeImage.alt = recipe.title;
 
+        // View Details Button
+        const viewDetailsButton = document.createElement("button");
+        viewDetailsButton.textContent = "👁";
+        viewDetailsButton.onclick = function () {
+          viewDetails(recipe.id); // Pass the recipe ID to the function
+        };
+
+        // Favourite and Unfavourite Buttons
+        const favouriteButton = document.createElement("button");
+        favouriteButton.textContent = "⭐";
+        favouriteButton.onclick = function () {
+          favouriteRecipe(recipe.id);
+          favouriteButton.disabled = true; // Disable the button when favorited
+          unfavouriteButton.disabled = false; // Enable the unfavorite button
+        };
+
+        const unfavouriteButton = document.createElement("button");
+        unfavouriteButton.textContent = "💔";
+        unfavouriteButton.disabled = true; // Initially disable the unfavorite button
+        unfavouriteButton.onclick = function () {
+          unfavouriteRecipe(recipe.id);
+          unfavouriteButton.disabled = true; // Disable the button when unfavorited
+          favouriteButton.disabled = false; // Enable the favorite button
+        };
+
+        // Check if this recipe is already in favorites
+        if (favourites.includes(recipe.id)) {
+          favouriteButton.disabled = true; // If already favorited, disable the favourite button
+          unfavouriteButton.disabled = false; // Enable unfavorite button
+        }
+
         // Append elements to the recipeDiv
         recipeDiv.appendChild(recipeTitle);
         recipeDiv.appendChild(recipeImage);
+        recipeDiv.appendChild(viewDetailsButton);
+        recipeDiv.appendChild(favouriteButton);
+        recipeDiv.appendChild(unfavouriteButton);
+
         favouritesContainer.appendChild(recipeDiv); // Add recipeDiv to the container
       })
       .catch((error) => console.error("Error fetching recipe details:", error));
@@ -34,6 +69,27 @@ function displayFavourites() {
 
 // Call the function to display favourites when the page loads
 displayFavourites();
+
+function favouriteRecipe(recipeId) {
+  // Get existing favorites from localStorage
+  let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+
+  // Check if the recipe is already in the list
+  if (!favourites.includes(recipeId)) {
+    favourites.push(recipeId);
+    localStorage.setItem("favourites", JSON.stringify(favourites));
+    alert("Recipe added to favourites!");
+  }
+}
+
+function unfavouriteRecipe(recipeId) {
+  let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+
+  // Filter out the recipeId from the list
+  favourites = favourites.filter((id) => id !== recipeId);
+  localStorage.setItem("favourites", JSON.stringify(favourites));
+  alert("Recipe removed from favourites!");
+}
 
 function goToFavourites() {
   window.location.href = "favourites.html";
