@@ -16,6 +16,7 @@ function displayFavourites() {
       .then((response) => response.json())
       .then((recipe) => {
         const recipeDiv = document.createElement("div");
+        const buttonDiv = document.createElement("section");
         const recipeTitle = document.createElement("h2");
         const recipeImage = document.createElement("img");
 
@@ -57,9 +58,10 @@ function displayFavourites() {
         // Append elements to the recipeDiv
         recipeDiv.appendChild(recipeTitle);
         recipeDiv.appendChild(recipeImage);
-        recipeDiv.appendChild(viewDetailsButton);
-        recipeDiv.appendChild(favouriteButton);
-        recipeDiv.appendChild(unfavouriteButton);
+        buttonDiv.appendChild(viewDetailsButton);
+        buttonDiv.appendChild(favouriteButton);
+        buttonDiv.appendChild(unfavouriteButton);
+        recipeDiv.appendChild(buttonDiv);
 
         favouritesContainer.appendChild(recipeDiv); // Add recipeDiv to the container
       })
@@ -69,6 +71,11 @@ function displayFavourites() {
 
 // Call the function to display favourites when the page loads
 displayFavourites();
+
+function viewDetails(recipeId) {
+  localStorage.setItem("selectedRecipeId", recipeId); // Store the recipe ID
+  window.location.href = "recipe.html"; // Redirect to the recipe page
+}
 
 function favouriteRecipe(recipeId) {
   // Get existing favorites from localStorage

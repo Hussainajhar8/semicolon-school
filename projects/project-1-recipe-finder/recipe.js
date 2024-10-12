@@ -7,6 +7,7 @@ const recipeDetailsContainer = document.getElementById(
 
 if (recipeId) {
   const URL = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${API_KEY}`;
+  const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
 
   fetch(URL)
     .then((response) => response.json())
@@ -44,7 +45,6 @@ if (recipeId) {
       unfavouriteButton.classList.add("unfavourite-button");
 
       // Get favourites from localStorage
-      const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
       if (favourites.includes(recipeId)) {
         favouriteButton.disabled = true;
       } else {
