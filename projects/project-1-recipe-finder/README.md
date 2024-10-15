@@ -1,4 +1,4 @@
-# Recipe Finder App
+# Recipe Finder App (Ajhar's Cook Book)
 
 ## Overview
 
