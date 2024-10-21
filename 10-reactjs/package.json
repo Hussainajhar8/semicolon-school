@@ -1,0 +1,20 @@
+{
+  "name": "10-reactjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "private": true,
+    "workspaces": [
+      "part1",
+      "part2",
+      "part3",
+      "part4",
+      "part5"
+    ]
+}
